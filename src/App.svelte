@@ -164,10 +164,13 @@
         }
 
         .project-image img {
-            max-width: 100%;
-            max-height: 100%;
+            display: block; /* Remove extra space below image */
+            width: 100%; /* Make image fill container width */
+            height: 100%; /* Make image fill container height */
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            /* object-fit: cover; /* Uncomment if you need the image to cover the area without distortion */
+ opacity: 0.8;
             object-fit: cover;
         }
 
@@ -194,7 +197,9 @@
         .project-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px; /* Slightly reduce gap */
+            justify-content: center; /* Center the tags */
+            align-items: flex-start; /* Align items to the start of the flex container */
             margin-bottom: 15px;
         }
 
@@ -208,33 +213,24 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
+            line-height: 1; /* Ensure consistent height */
         }
 
         /* Technology-specific tag colors */
         .tag.react { 
-            background: rgba(97, 218, 251, 0.05); 
-            border-color: rgba(97, 218, 251, 0.15);
-            color: rgba(255, 255, 255, 0.95);
+ background: rgba(97, 218, 251, 0.08);
+ border-color: rgba(97, 218, 251, 0.2);
+ color: rgba(255, 255, 255, 0.95);
         }
         .tag.node { 
-            background: rgba(104, 160, 99, 0.05); 
-            border-color: rgba(104, 160, 99, 0.15);
+ background: rgba(104, 160, 99, 0.08); 
+ border-color: rgba(104, 160, 99, 0.2);
             color: rgba(255, 255, 255, 0.95);
         }
         .tag.vue { 
-            background: rgba(76, 175, 80, 0.05); 
-            border-color: rgba(76, 175, 80, 0.15);
-            color: rgba(255, 255, 255, 0.95);
-        }
-        .tag.laravel { 
-            background: rgba(255, 45, 32, 0.05); 
-            border-color: rgba(255, 45, 32, 0.15);
-            color: rgba(255, 255, 255, 0.95);
-        }
-        .tag.javascript { 
-            background: rgba(247, 223, 30, 0.05); 
-            border-color: rgba(247, 223, 30, 0.15);
-            color: rgba(255, 255, 255, 0.95);
+ background: rgba(76, 175, 80, 0.08); 
+ border-color: rgba(76, 175, 80, 0.2);
+ color: rgba(255, 255, 255, 0.95);
         }
         .tag.firebase { 
             background: rgba(255, 193, 7, 0.05); 
@@ -252,28 +248,53 @@
             color: rgba(255, 255, 255, 0.95);
         }
         .tag.maps { 
-            background: rgba(66, 133, 244, 0.05); 
-            border-color: rgba(66, 133, 244, 0.15);
+ background: rgba(66, 133, 244, 0.08); 
+ border-color: rgba(66, 133, 244, 0.2);
             color: rgba(255, 255, 255, 0.95);
         }
         .tag.realtime { 
-            background: rgba(156, 39, 176, 0.05); 
-            border-color: rgba(156, 39, 176, 0.15);
+ background: rgba(156, 39, 176, 0.08); 
+ border-color: rgba(156, 39, 176, 0.2);
             color: rgba(255, 255, 255, 0.95);
         }
         .tag.native { 
-            background: rgba(0, 172, 193, 0.05); 
-            border-color: rgba(0, 172, 193, 0.15);
+ background: rgba(0, 172, 193, 0.08); 
+ border-color: rgba(0, 172, 193, 0.2);
             color: rgba(255, 255, 255, 0.95);
         }
         .tag.redux { 
-            background: rgba(118, 74, 188, 0.05); 
-            border-color: rgba(118, 74, 188, 0.15);
+ background: rgba(118, 74, 188, 0.08); 
+ border-color: rgba(118, 74, 188, 0.2);
             color: rgba(255, 255, 255, 0.95);
         }
         .tag.notifications { 
-            background: rgba(255, 87, 34, 0.05); 
-            border-color: rgba(255, 87, 34, 0.15);
+ background: rgba(255, 87, 34, 0.08); 
+ border-color: rgba(255, 87, 34, 0.2);
+            color: rgba(255, 255, 255, 0.95);
+        }
+.tag.firebase { 
+ background: rgba(255, 193, 7, 0.05); 
+ border-color: rgba(255, 193, 7, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+.tag.python { 
+ background: rgba(59, 130, 246, 0.08);
+ border-color: rgba(59, 130, 246, 0.2);
+ color: rgba(255, 255, 255, 0.95);
+        }
+.tag.flask { 
+ background: rgba(0, 0, 0, 0.08);
+ border-color: rgba(0, 0, 0, 0.2);
+ color: rgba(255, 255, 255, 0.95);
+        }
+.tag.beautifulsoup { 
+ background: rgba(29, 161, 242, 0.08);
+ border-color: rgba(29, 161, 242, 0.2);
+ color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.sqlite { 
+            background: rgba(0, 102, 204, 0.05); 
+            border-color: rgba(0, 102, 204, 0.15);
             color: rgba(255, 255, 255, 0.95);
         }
 
@@ -470,21 +491,16 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            🚦 Traffic Management App
-                        </div>
+                        <img src="/assets/traffic-app-v1.gif" alt="Traffic Management App GIF">
                     </div>
                     <h3 class="project-title">Traffic App</h3>
                     <p class="project-description">
-                        A comprehensive traffic management application featuring real-time traffic data, 
-                        route optimization, and intelligent congestion prediction to help users navigate 
-                        efficiently through urban environments.
+                        I built San Diego Traffic Watch using Python, Flask, and BeautifulSoup to scrape and store real-time CHP traffic data, adding geolocation and UUID tracking for a personalized experience. I designed the frontend with Svelte to create a fast, responsive interface featuring live maps, infinite scroll, dark mode, and social features like likes and comments.
                     </p>
                     <div class="project-tags">
-                        <span class="tag react">React</span>
-                        <span class="tag node">Node.js</span>
-                        <span class="tag maps">Maps API</span>
-                        <span class="tag realtime">Real-time Data</span>
+                        <span class="tag python">Python</span><span class="tag flask">Flask</span><span class="tag svelte">Svelte</span><span class="tag beautifulsoup">BeautifulSoup</span>
+ <span class="tag sqlite">SQLite</span>
+
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">View Demo</a>
