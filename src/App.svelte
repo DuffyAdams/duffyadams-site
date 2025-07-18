@@ -206,6 +206,75 @@
             font-size: 0.8rem;
             font-weight: 500;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Technology-specific tag colors */
+        .tag.react { 
+            background: rgba(97, 218, 251, 0.05); 
+            border-color: rgba(97, 218, 251, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.node { 
+            background: rgba(104, 160, 99, 0.05); 
+            border-color: rgba(104, 160, 99, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.vue { 
+            background: rgba(76, 175, 80, 0.05); 
+            border-color: rgba(76, 175, 80, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.laravel { 
+            background: rgba(255, 45, 32, 0.05); 
+            border-color: rgba(255, 45, 32, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.javascript { 
+            background: rgba(247, 223, 30, 0.05); 
+            border-color: rgba(247, 223, 30, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.firebase { 
+            background: rgba(255, 193, 7, 0.05); 
+            border-color: rgba(255, 193, 7, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.stripe { 
+            background: rgba(99, 91, 255, 0.05); 
+            border-color: rgba(99, 91, 255, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.mysql { 
+            background: rgba(0, 123, 191, 0.05); 
+            border-color: rgba(0, 123, 191, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.maps { 
+            background: rgba(66, 133, 244, 0.05); 
+            border-color: rgba(66, 133, 244, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.realtime { 
+            background: rgba(156, 39, 176, 0.05); 
+            border-color: rgba(156, 39, 176, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.native { 
+            background: rgba(0, 172, 193, 0.05); 
+            border-color: rgba(0, 172, 193, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.redux { 
+            background: rgba(118, 74, 188, 0.05); 
+            border-color: rgba(118, 74, 188, 0.15);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .tag.notifications { 
+            background: rgba(255, 87, 34, 0.05); 
+            border-color: rgba(255, 87, 34, 0.15);
+            color: rgba(255, 255, 255, 0.95);
         }
 
         .project-links {
@@ -412,10 +481,10 @@
                         efficiently through urban environments.
                     </p>
                     <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Maps API</span>
-                        <span class="tag">Real-time Data</span>
+                        <span class="tag react">React</span>
+                        <span class="tag node">Node.js</span>
+                        <span class="tag maps">Maps API</span>
+                        <span class="tag realtime">Real-time Data</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">View Demo</a>
@@ -435,10 +504,10 @@
                         and an intuitive admin dashboard for inventory management and analytics.
                     </p>
                     <div class="project-tags">
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">Laravel</span>
-                        <span class="tag">Stripe API</span>
-                        <span class="tag">MySQL</span>
+                        <span class="tag vue">Vue.js</span>
+                        <span class="tag laravel">Laravel</span>
+                        <span class="tag stripe">Stripe API</span>
+                        <span class="tag mysql">MySQL</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">View Demo</a>
@@ -458,10 +527,10 @@
                         deadline tracking, and productivity analytics designed for modern teams.
                     </p>
                     <div class="project-tags">
-                        <span class="tag">React Native</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">Redux</span>
-                        <span class="tag">Push Notifications</span>
+                        <span class="tag native">React Native</span>
+                        <span class="tag firebase">Firebase</span>
+                        <span class="tag redux">Redux</span>
+                        <span class="tag notifications">Push Notifications</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">View Demo</a>
